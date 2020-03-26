@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ONE: PENGAJAR</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Lingua project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+<style>
+
+
+.centered11{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	color: black;
+}
+.centered1 {
+    top: 40%;
+    left: 50%;
+    width: 80%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.formbg {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  margin-top: 30px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+.courses_background{
+	position:absolute;
+	background-color: transparent;
+}
+p a{
+	border-bottom: none;
+}
+b {
+  color: black;
+}
+tr:nth-child(even){background-color: #E0E0E2}
+th{
+	color:#00C;
+	text-align: center;
+}
+
+tr,td{
+	color: black;
+	text-align: center;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 20px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto 10% auto; 
+    border: 1px solid #888;
+    width: 40%; 
+    margin-top: 10%;
+    padding-bottom: 5%;
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 10%;
+    }
+}
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+.close1 {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button, input[class=btnLogin]{
+    background-color: #0000cc;
+    color: white;
+    padding: 16px 40px;
+    margin: -5px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.cancelbtn {
+  background-color: #cc0000;
+}
+button:hover {
+    opacity: 0.8;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+    padding-bottom: 5%;
+}
+
+.btn{
+	width: 10%;
+}
+
+</style>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+			
+		<!-- Top Bar -->
+		<div class="top_bar">
+			<div class="top_bar_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+								<div class="top_bar_right ml-auto">
+
+
+									<!-- Social -->
+									<div class="top_bar_social">
+										<span class="top_bar_title social_title">ikuti kami</span>
+										<ul>
+											<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>				
+		</div>
+
+		<!-- Header Content -->
+		<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="logo_container mr-auto">
+								<a href="#">
+									<div class="logo_text">Waris Alam</div>
+								</a>
+							</div>
+							<nav class="main_nav_contaner">
+								<ul class="main_nav">
+									<li><a href="homeAdmin.html">Halaman Utama</a></li>
+									<li><a href="viewProfile.html">Profil</a></li>
+									<li><a href="viewClass.html">Kelas</a></li>
+									<li class="active"><a href="Coach.html">Pengajar</a></li>
+									<li><a href="listOfParticipant.html">Pelajar</a></li>
+									<li><a href="viewReport.html">Laporan</a></li>
+									<li><a href="LogOut.html">Log Keluar</a></li>
+								</ul>
+							</nav>
+							<div class="header_content_right ml-auto text-right">
+								</div>
+
+								<!-- Hamburger -->
+
+								<div class="user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></div>
+								<div class="hamburger menu_mm">
+									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<div class="search">
+			<form action="#" class="header_search_form menu_mm">
+				<input type="search" class="search_input menu_mm" placeholder="Search" required="required">
+				<button class="header_search_button d-flex flex-column align-items-center justify-content-center menu_mm">
+					<i class="fa fa-search menu_mm" aria-hidden="true"></i>
+				</button>
+			</form>
+		</div>
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="home.html">Halaman Utama</a></li>
+				<li class="menu_mm"><a href="viewProfile.html">Profil</a></li>
+				<li class="menu_mm"><a href="viewClass.html">Kelas</a></li>
+				<li class="menu_mm"><a href="Payment">Pembayaran</a></li>
+				<li class="menu_mm"><a href="contactUs.html">Hubungi Kami</a></li>
+				<li class="menu_mm"><a href="logOut.html">Log Keluar</a></li>
+			</ul>
+		</nav>
+		<div class="menu_extra">
+			<div class="menu_phone"><span class="menu_title">phone:</span>+44 300 303 0266</div>
+			<div class="menu_social">
+				<span class="menu_title">ikuti kami</span>
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="home_background" style="background-image: url(images/background.png);"></div>
+		<div class="home_content">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<h1 class="home_title">Waris Alam</h1>
+						<h1>Kursus Gerak Seni Melayu (KGSM)</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Courses -->
+
+	<div class="courses">
+		<div class="courses_background"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h2 class="section_title text-center">PENGAJAR</h2>
+<br><br><br>
+					<tr>
+					    <td><center><b style="color: black">NAMA PENGAJAR: &nbsp; </b><input type="text" id="txtbox" name="namakelas"  value="" style="width:20%; border-radius: 5px; border-style: solid; height: 40px; "></center></td>
+					    </tr>
+				<button type="button" class="btn btn-secondary btn-sm" style="position:absolute; left: 1080px; top: 170px;" onclick="document.getElementById('id01').style.display='block'">
+					<i class="fa fa-plus" style="font-size:12px"></i>&nbsp; Pengajar</button>
+
+					<div id="id01" class="modal">
+  <form class="modal-content" method="post" action="signup_class.php" enctype="multipart/form-data">
+    <div class="imgcontainer">
+	  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	  </div>
+	  <div class="container">
+      <h3>Daftar Pengajar Baru</h3>
+      <p>Sila isi maklumat di bawah.</p>
+      <hr>
+      <label for="fname"><b>Ambil foto</b></label><br>
+      <input type="file" name="image"><br><br>
+      
+      <label for="fname"><b>Nama penuh</b></label>
+      <input type="text" placeholder="Masukkan nama penuh" name="fname" id="fname" /required>
+      
+      <label for="uname"><b>Nama pengajar</b></label>
+      <input type="text" placeholder="Masukkan nama pengajar" name="uname" id="uname" /required>
+      
+      <label for="uname"><b>No kad pengenalan</b></label>
+      <input type="text" placeholder="Masukkan no kad pengenalan" name="noic" id="noic" /required>
+        
+      <label for="psw"><b>Kata laluan</b></label>
+      <input type="password" placeholder="Masukkan kata laluan" name="psw" id="psw" /required>
+      
+      <label for="psw2"><b>Pengesahan kata laluan</b></label>
+      <input type="password" placeholder="Masukkan kata laluan" name="psw2" id="psw2" /required>
+	  
+	   <label for="email"><b>E-mel</b></label>
+      <input type="text" placeholder="Masukkan e-mel" name="email" id="email" /required>
+      
+      <label for="phoneno"><b>Telefon</b></label>
+      <input type="text" placeholder="Masukkan no. telefon" name="phoneno" id="phoneno" /required>
+     
+      <label for="address"><b>Alamat</b></label>
+      <input type="text" placeholder="Masukkan alamat" name="address" id="address" /required>
+	
+	<!--<label for="daftar"><b>Daftar sebagai: </b></label>
+      <input type=radio name="utype" id="peserta" value="3"> Peserta
+      <input type=radio name="utype" id="pengajar" value="2"> Pengajar <br><br>-->
+      
+      <p>Dengan membuat akaun ini, anda bersetuju dengan terma dan privasi kami.</p>
+	  <br>
+      <div class="clearfix">
+        <button style="width:100%" type="submit" class="signupbtn" >Daftar masuk</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+					<div class="centered1">
+					      <center><form class="formbg" name="resetForm" method="post">
+					        <table  border=0.5px style="width:70%" align="center">
+					    </td>
+					    <br><br><br>
+					              <form action="" method="POST">
+					        <center>
+					                   <table style="width:100%; align="center" class="table table-striped table-fixed">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nama Penuh</th>
+      <th scope="col">No. IC</th>
+      <th scope="col">No. Telefon</th>
+	  <th scope="col">Email</th>
+	  <th scope="col">Status</th>
+	  <th scope="col">Pautan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>112233</td>
+      <td>Eqram Bin Ahmad</td>
+      <td>650101-08-5193</td>
+      <td>0175184545</td>
+	  <td>eqramahmad@gmail.com</td>
+	  <td><i class="fa fa-check-square-o" style="font-size:20px;color:green"></i></td>
+	  <td><a href="">Lihat Profil</td>
+    </tr>
+    <tr>
+      <td>112233</td>
+      <td>Eqram Bin Ahmad</td>
+      <td>650101-08-5193</td>
+      <td>0175184545</td>
+	  <td>eqramahmad@gmail.com</td>
+	  <td><i class="fa fa-close" style="font-size:20px;color:gray"></i></td>
+	  <td><a href="">Lihat Profil</td>
+    </tr>
+    <tr>
+      <td>112233</td>
+      <td>Eqram Bin Ahmad</td>
+      <td>650101-08-5193</td>
+      <td>0175184545</td>
+	  <td>eqramahmad@gmail.com</td>
+	  <td><i class="fa fa-check-square-o" style="font-size:20px;color:green"></i></td>
+	  <td><a href="">Lihat Profil</td>
+    </tr>
+  </tbody>
+</table>
+
+				
+
+			</div>
+		</div>
+	</div>
+
+	
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="copyright_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
+							<div class="cr"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Hak cipta terpelihara | Waris Alam 
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+							<div class="cr_right ml-md-auto">
+								<div class="footer_phone"><span class="cr_title">phone:</span>+44 300 303 0266</div>
+								<div class="footer_social">
+									<span class="cr_social_title">ikuti kami</span>
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
